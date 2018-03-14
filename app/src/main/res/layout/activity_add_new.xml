@@ -126,12 +126,14 @@
                 android:text="Color:"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
+
             <GridLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:rowCount="2"
                 android:columnCount="3"
                 android:layout_gravity="center"
+                android:id="@+id/color_box"
                >
 
                 <TextView
