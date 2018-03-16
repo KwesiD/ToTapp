@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.lang.reflect.Array;
@@ -59,6 +60,7 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ToDoHolder> {
     @Override
     public void onBindViewHolder(ToDoHolder holder, int position) {
         holder.textView.setText(itemList.get(position).toString());
+        ((LinearLayout)holder.textView.getParent()).setBackgroundColor(itemList.get(position).getColor());
     }
 
     @Override
@@ -78,7 +80,7 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ToDoHolder> {
 
         @Override
         public void onClick(View view) {
-            
+
         }
     }
 

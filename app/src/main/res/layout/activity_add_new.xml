@@ -37,7 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -46,13 +47,22 @@
             android:textSize="20sp"
             android:textStyle="bold"/>
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:hint="New To-Do Item"
             android:textSize="20dp"
             android:paddingLeft="10dp"
             android:id="@+id/to_do_box"
         />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_button"
+            android:id="@+id/color_indicator"
+            />
+
 
         </LinearLayout>
 

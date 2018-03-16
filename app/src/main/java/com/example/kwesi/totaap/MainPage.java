@@ -64,8 +64,11 @@ public class MainPage extends AppCompatActivity {
             ToDoItem[] newItem = {(ToDoItem) data.getParcelableExtra("item")};
             adapter.add(newItem);
         }
-        else{
+        else if(resultCode == AddNew.resultCodes.RETURN_ARRAY.ordinal()){
             adapter.add((ToDoItem[]) data.getParcelableArrayExtra("item"));
+        }
+        else if(resultCode == AddNew.resultCodes.CANCEL.ordinal()){
+            //Do nothing if cancel
         }
 
     }
